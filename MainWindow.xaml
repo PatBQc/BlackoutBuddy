@@ -12,7 +12,11 @@
         MouseEnter="Window_MouseEnter"
         MouseLeave="Window_MouseLeave"
         MouseDown="Window_MouseDown"
-        MouseDoubleClick="Window_MouseDoubleClick" Icon="MainWindowIcon.ico"
+        MouseDoubleClick="Window_MouseDoubleClick" 
+        KeyDown="Window_KeyDown"
+        KeyUp="Window_KeyUp"
+        MouseWheel="Window_MouseWheel"
+        Icon="MainWindowIcon.ico"
         >
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="10"/>
