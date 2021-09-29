@@ -22,7 +22,7 @@ namespace WpfBlackScreen
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool _scaleHorizontally = true;
+        private bool _ctrlPressed = false;
 
         // Icon taken from : https://thenounproject.com/term/no-cameras/954941/
         public MainWindow()
@@ -67,8 +67,16 @@ namespace WpfBlackScreen
         // Mainly grab the cursors input to move the window on a per pixel basis...
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            ///Keep tracks of wether the CTRL key is pressed to scale the window vertically and change the NumPad behavior
+            if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)
+            {
+                _ctrlPressed = true;
+            }
+
+
             double delta = 1;
 
+            // Move the box with the Arrow Keys
             if (e.Key == Key.Left)
             {
                 Left -= delta;
@@ -86,17 +94,61 @@ namespace WpfBlackScreen
                 Top += delta;
             }
 
-            ///...and also keep tracks of wether the CTRL key is pressed to scale the window vertically 
-            if(e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)
+            delta = _ctrlPressed ? -delta : delta;
+
+            // Scale the box with the Num Pad keys
+            if (e.Key == Key.NumPad4)
             {
-                _scaleHorizontally = false;
+                Left -= delta;
+                Width += delta;
             }
+            if (e.Key == Key.NumPad6)
+            {
+                Width += delta;
+            }
+            if (e.Key == Key.NumPad8)
+            {
+                Top -= delta;
+                Height += delta;
+            }
+            if (e.Key == Key.NumPad2)
+            {
+                Height += delta;
+            }
+            if (e.Key == Key.NumPad7)
+            {
+                Left -= delta;
+                Width += delta;
+                Top -= delta;
+                Height += delta;
+            }
+            if (e.Key == Key.NumPad9)
+            {
+                Top -= delta;
+                Height += delta;
+                Width += delta;
+            }
+            if (e.Key == Key.NumPad1)
+            {
+                Left -= delta;
+                Width += delta;
+                Height += delta;
+            }
+            if (e.Key == Key.NumPad3)
+            {
+                Height += delta;
+                Width += delta;
+            }
+            
         }
 
-        // Just assume we are now releasing any key (and the CTRL) so that we start scaling horizontally again with the mouse wheel
+        // If we are releasing the CTRL so that we start scaling horizontally again with the mouse wheel or change the NumPad behavior
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            _scaleHorizontally = true;
+            if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)
+            {
+                _ctrlPressed = false;
+            }
         }
 
 
@@ -105,14 +157,14 @@ namespace WpfBlackScreen
         private void Window_MouseWheel(object sender, MouseWheelEventArgs e)
         {
             int delta = e.Delta;
-            double w1 = _scaleHorizontally ? ActualWidth : ActualHeight;
+            double w1 = _ctrlPressed ? ActualHeight : ActualWidth;
             double w2 = w1 + 2 * delta / 20;
             DoubleAnimation anima = new DoubleAnimation();
             anima.Duration = new Duration(TimeSpan.FromSeconds(0.3));
             anima.From = w1;
             anima.To = w2;
             anima.FillBehavior = FillBehavior.HoldEnd;
-            BeginAnimation(_scaleHorizontally ? Window.WidthProperty : Window.HeightProperty, anima);
+            BeginAnimation(_ctrlPressed ? Window.HeightProperty : Window.WidthProperty, anima);
         }
 
     }
