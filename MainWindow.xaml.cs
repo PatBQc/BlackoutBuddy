@@ -67,7 +67,13 @@ namespace WpfBlackScreen
         // Mainly grab the cursors input to move the window on a per pixel basis...
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            ///Keep tracks of wether the CTRL key is pressed to scale the window vertically and change the NumPad behavior
+            // Show help on F1
+            if(e.Key == Key.F1)
+            {
+                ShowHelp();
+            }
+
+            // Keep tracks of wether the CTRL key is pressed to scale the window vertically and change the NumPad behavior
             if (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)
             {
                 _ctrlPressed = true;
@@ -140,6 +146,22 @@ namespace WpfBlackScreen
                 Width += delta;
             }
             
+        }
+
+        private void ShowHelp()
+        {
+            string message = "Keyboard" + Environment.NewLine +
+                "  Numpad --> Expand the corresponding edge" + Environment.NewLine +
+                "  CTRL + Numpad --> Contract the corresponding edge" + Environment.NewLine +
+                "  Arrow --> Move the window" + Environment.NewLine +
+                "" + Environment.NewLine +
+                "Mouse" + Environment.NewLine +
+                "  Drag --> Move the window" + Environment.NewLine +
+                "  Wheel --> Expand the window" + Environment.NewLine +
+                "  CTRL + Wheel --> Contract the window" + Environment.NewLine +
+                "";
+
+            MessageBox.Show(this, message, "Help", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         // If we are releasing the CTRL so that we start scaling horizontally again with the mouse wheel or change the NumPad behavior
