@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfBlackScreen
+namespace BlackoutBuddy
 {
     /// <summary>
     /// Thanks to Andrew Huberman for providing the insight to hide my own face in meetings.

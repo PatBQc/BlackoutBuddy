@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfBlackScreen.Properties
+namespace BlackoutBuddy.Properties
 {
 
 
