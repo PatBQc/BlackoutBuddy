@@ -1,8 +1,8 @@
-# 🖥️ WpfBlackScreen
+# 🖥️ BlackoutBuddy
 
 ## 🎭 Why hide when you can blackout?
 
-Ever felt like you're starring in your own reality show during video calls? 📹 Tired of being distracted by your own charming face or those pesky ads while trying to focus? Say hello to WpfBlackScreen, your new best friend in the digital world!
+Ever felt like you're starring in your own reality show during video calls? 📹 Tired of being distracted by your own charming face or those pesky ads while trying to focus? Say hello to BlackoutBuddy, your new best friend in the digital world!
 
 ## 🌟 Features
 
@@ -13,6 +13,13 @@ Ever felt like you're starring in your own reality show during video calls? 📹
 - 🔢 Resize with numpad for that perfect fit
 - 🖲️ Mouse wheel resizing for the scroll enthusiasts
 - 🆘 Help at your fingertips with F1
+
+## 🤩 Showcase
+In Microsoft Teams
+
+![Microsoft Teams exemple](https://github.com/PatBQc/BlackoutBuddy/blob/master/_readme/Teams.gif?raw=true)
+
+
 
 ## 🚀 Getting Started
 
@@ -25,7 +32,7 @@ Ever felt like you're starring in your own reality show during video calls? 📹
 
 1. Clone the repo
    ```
-   git clone https://github.com/PatBQc/WpfBlackScreen.git
+   git clone https://github.com/PatBQc/BlackoutBuddy.git
    ```
 2. Compile the solution
    
@@ -35,7 +42,7 @@ Ever felt like you're starring in your own reality show during video calls? 📹
 
 ## 🎮 How to Use
 
-1. Launch WpfBlackScreen
+1. Launch BlackoutBuddy
 2. Position the black rectangle over what you want to hide
 3. Enjoy your distraction-free view!
 
@@ -63,7 +70,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/PatBQc/BlackoutBuddy/blob/master/LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -71,4 +78,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   [![Thanks to Andrew Huberman for the inspiration to hide our own faces during video calls](https://img.youtube.com/vi/ClxRHJPz8aQ/0.jpg)](https://www.youtube.com/watch?v=ClxRHJPz8aQ?t=9301)
 - Icon from [The Noun Project](https://thenounproject.com/term/no-cameras/954941/)
 
-Remember, with great power comes great responsibility. Use WpfBlackScreen wisely, and may your screen be forever clutter-free! 🦸‍♂️🦸‍♀️
+Remember, with great power comes great responsibility. Use BlackoutBuddy wisely, and may your screen be forever clutter-free! 🦸‍♂️🦸‍♀️
