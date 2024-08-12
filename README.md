@@ -15,13 +15,17 @@ Ever felt like you're starring in your own reality show during video calls? 📹
 - 🆘 Help at your fingertips with F1
 
 ## 🤩 Showcase
+### In Google Meet
+
+![Google Meet](https://github.com/PatBQc/BlackoutBuddy/blob/master/_readme/GoogleMeet.gif?raw=true)
+
 ### In Microsoft Teams
 
 ![Microsoft Teams exemple](https://github.com/PatBQc/BlackoutBuddy/blob/master/_readme/Teams.gif?raw=true)
 
 ### In Zoom
 
-![Microsoft Teams exemple](https://github.com/PatBQc/BlackoutBuddy/blob/master/_readme/Zoom.gif?raw=true)
+![Zoom](https://github.com/PatBQc/BlackoutBuddy/blob/master/_readme/Zoom.gif?raw=true)
 
 
 
